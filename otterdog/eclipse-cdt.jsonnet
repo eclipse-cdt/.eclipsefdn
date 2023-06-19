@@ -82,7 +82,7 @@ orgs.newOrg('eclipse-cdt') {
       allow_merge_commit: false,
       allow_update_branch: false,
       default_branch: "master",
-      description: "eclipse-cdt-lsp",
+      description: "Eclipse CDT\u2122 LSP Extensions for CDT",
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
