@@ -19,12 +19,11 @@ orgs.newOrg('eclipse-cdt') {
     web_commit_signoff_required: false,
   },
   webhooks+: [
-    orgs.newWebhook() {
+    orgs.newOrgWebhook('https://ci.eclipse.org/cdt/github-webhook/') {
       events+: [
         "pull_request",
         "push"
       ],
-      url: "https://ci.eclipse.org/cdt/github-webhook/",
     },
   ],
   _repositories+:: [
