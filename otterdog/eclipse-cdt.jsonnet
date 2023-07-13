@@ -42,6 +42,7 @@ orgs.newOrg('eclipse-cdt') {
       allow_auto_merge: true,
       allow_merge_commit: false,
       allow_update_branch: false,
+      dependabot_security_updates_enabled: true,
       description: "Eclipse CDT\u2122 C/C++ Development Tools",
       has_discussions: true,
       has_wiki: false,
@@ -63,6 +64,7 @@ orgs.newOrg('eclipse-cdt') {
     orgs.newRepo('cdt-infra') {
       allow_update_branch: false,
       default_branch: "master",
+      dependabot_security_updates_enabled: true,
       has_wiki: false,
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
