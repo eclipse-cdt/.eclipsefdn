@@ -1,0 +1,20 @@
+site_name: Otterdog configuration @ eclipse-cdt
+site_description: Otterdog configuration @ eclipse-cdt
+strict: true
+
+site_url: https://eclipse-cdt.github.io/.eclipsefdn/
+
+docs_dir: ./docs
+site_dir: ./_site
+
+theme:
+  name: 'material'
+
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins: []
+nav: []
+watch: []
