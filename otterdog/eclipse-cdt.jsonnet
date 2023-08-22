@@ -37,8 +37,6 @@ orgs.newOrg('eclipse-cdt') {
       has_issues: false,
       has_wiki: false,
       homepage: "",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('cdt') {
@@ -50,8 +48,6 @@ orgs.newOrg('eclipse-cdt') {
       has_discussions: true,
       has_wiki: false,
       homepage: "http://eclipse.org/cdt",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       branch_protection_rules: [
         orgs.newBranchProtectionRule('*') {
@@ -69,8 +65,6 @@ orgs.newOrg('eclipse-cdt') {
       default_branch: "master",
       dependabot_security_updates_enabled: true,
       has_wiki: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       branch_protection_rules: [
         orgs.newBranchProtectionRule('master') {
@@ -87,15 +81,12 @@ orgs.newOrg('eclipse-cdt') {
       default_branch: "master",
       description: "Eclipse CDT™ LSP Extensions for CDT",
       has_discussions: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('cdt-new-managedbuild-prototype') {
       archived: true,
       default_branch: "master",
       description: "Prototype of new Managed Build system for Eclipse CDT",
-      secret_scanning: "disabled",
       web_commit_signoff_required: false,
       branch_protection_rules: [
         orgs.newBranchProtectionRule('master') {
@@ -111,7 +102,6 @@ orgs.newOrg('eclipse-cdt') {
       default_branch: "master",
       description: "C/C++ Development Tooling (CDT) Visual Studio Code extension",
       homepage: "",
-      secret_scanning: "disabled",
       web_commit_signoff_required: false,
       branch_protection_rules: [
         orgs.newBranchProtectionRule('master') {
