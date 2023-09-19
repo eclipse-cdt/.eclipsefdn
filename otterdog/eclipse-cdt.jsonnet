@@ -59,6 +59,7 @@ orgs.newOrg('eclipse-cdt') {
       web_commit_signoff_required: false,
       branch_protection_rules: [
         custom_branch_protection_rule('main'),
+        custom_branch_protection_rule('cdt_*'),
       ],
     },
     orgs.newRepo('cdt-infra') {
