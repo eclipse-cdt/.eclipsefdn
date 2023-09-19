@@ -58,8 +58,7 @@ orgs.newOrg('eclipse-cdt') {
       homepage: "http://eclipse.org/cdt",
       web_commit_signoff_required: false,
       branch_protection_rules: [
-        custom_branch_protection_rule('main'),
-        custom_branch_protection_rule('cdt_*'),
+        custom_branch_protection_rule('*'),
       ],
     },
     orgs.newRepo('cdt-infra') {
@@ -69,7 +68,7 @@ orgs.newOrg('eclipse-cdt') {
       has_wiki: false,
       web_commit_signoff_required: false,
       branch_protection_rules: [
-        custom_branch_protection_rule('master'),
+        custom_branch_protection_rule('*'),
       ],
     },
     orgs.newRepo('cdt-lsp') {
@@ -80,7 +79,7 @@ orgs.newOrg('eclipse-cdt') {
       has_discussions: true,
       web_commit_signoff_required: false,
       branch_protection_rules: [
-        custom_branch_protection_rule('master'),
+        custom_branch_protection_rule('*'),
       ],
     },
     orgs.newRepo('cdt-new-managedbuild-prototype') {
@@ -89,7 +88,7 @@ orgs.newOrg('eclipse-cdt') {
       description: "Prototype of new Managed Build system for Eclipse CDT",
       web_commit_signoff_required: false,
       branch_protection_rules: [
-        custom_branch_protection_rule('master'),
+        custom_branch_protection_rule('*'),
       ],
     },
     orgs.newRepo('cdt-vscode') {
@@ -99,7 +98,7 @@ orgs.newOrg('eclipse-cdt') {
       homepage: "",
       web_commit_signoff_required: false,
       branch_protection_rules: [
-        custom_branch_protection_rule('master'),
+        custom_branch_protection_rule('*'),
       ],
     },
   ],
