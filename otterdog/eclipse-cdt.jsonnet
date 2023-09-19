@@ -1,5 +1,10 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
+local custom_branch_protection_rule(pattern) = 
+  orgs.newBranchProtectionRule(pattern) {
+    required_approving_review_count: 0,
+  };
+
 orgs.newOrg('eclipse-cdt') {
   settings+: {
     billing_email: "webmaster@eclipse.org",
@@ -38,6 +43,9 @@ orgs.newOrg('eclipse-cdt') {
       has_wiki: false,
       homepage: "",
       web_commit_signoff_required: false,
+      branch_protection_rules: [
+        custom_branch_protection_rule('main'),
+      ],
     },
     orgs.newRepo('cdt') {
       allow_auto_merge: true,
@@ -50,14 +58,7 @@ orgs.newOrg('eclipse-cdt') {
       homepage: "http://eclipse.org/cdt",
       web_commit_signoff_required: false,
       branch_protection_rules: [
-        orgs.newBranchProtectionRule('*') {
-          bypass_pull_request_allowances+: [
-            "@jonahgraham"
-          ],
-          required_approving_review_count: 0,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
+        custom_branch_protection_rule('main'),
       ],
     },
     orgs.newRepo('cdt-infra') {
@@ -67,9 +68,7 @@ orgs.newOrg('eclipse-cdt') {
       has_wiki: false,
       web_commit_signoff_required: false,
       branch_protection_rules: [
-        orgs.newBranchProtectionRule('master') {
-          required_approving_review_count: 0,
-        },
+        custom_branch_protection_rule('master'),
       ],
     },
     orgs.newRepo('cdt-lsp') {
@@ -79,6 +78,9 @@ orgs.newOrg('eclipse-cdt') {
       description: "Eclipse CDT™ LSP Extensions for CDT",
       has_discussions: true,
       web_commit_signoff_required: false,
+      branch_protection_rules: [
+        custom_branch_protection_rule('master'),
+      ],
     },
     orgs.newRepo('cdt-new-managedbuild-prototype') {
       archived: true,
@@ -86,12 +88,7 @@ orgs.newOrg('eclipse-cdt') {
       description: "Prototype of new Managed Build system for Eclipse CDT",
       web_commit_signoff_required: false,
       branch_protection_rules: [
-        orgs.newBranchProtectionRule('master') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
+        custom_branch_protection_rule('master'),
       ],
     },
     orgs.newRepo('cdt-vscode') {
@@ -101,12 +98,7 @@ orgs.newOrg('eclipse-cdt') {
       homepage: "",
       web_commit_signoff_required: false,
       branch_protection_rules: [
-        orgs.newBranchProtectionRule('master') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
+        custom_branch_protection_rule('master'),
       ],
     },
   ],
