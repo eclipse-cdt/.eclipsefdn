@@ -4,6 +4,9 @@ strict: false
 
 site_url: https://eclipse-cdt.github.io/.eclipsefdn/
 
+repo_name: eclipse-cdt/.eclipsefdn
+repo_url: https://github.com/eclipse-cdt/.eclipsefdn/
+
 docs_dir: ./docs
 site_dir: ./_site
 
