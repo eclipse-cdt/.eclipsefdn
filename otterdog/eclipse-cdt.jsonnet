@@ -8,7 +8,6 @@ local custom_branch_protection_rule(pattern) =
 orgs.newOrg('eclipse-cdt') {
   settings+: {
     billing_email: "webmaster@eclipse.org",
-    default_repository_permission: "none",
     dependabot_alerts_enabled_for_new_repositories: false,
     dependabot_security_updates_enabled_for_new_repositories: false,
     dependency_graph_enabled_for_new_repositories: false,
@@ -45,6 +44,9 @@ orgs.newOrg('eclipse-cdt') {
       has_wiki: false,
       homepage: "",
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
       branch_protection_rules: [
         custom_branch_protection_rule('main'),
       ],
@@ -59,6 +61,9 @@ orgs.newOrg('eclipse-cdt') {
       has_wiki: false,
       homepage: "http://eclipse.org/cdt",
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
       branch_protection_rules: [
         custom_branch_protection_rule('*'),
       ],
@@ -71,6 +76,9 @@ orgs.newOrg('eclipse-cdt') {
       dependabot_security_updates_enabled: true,
       has_wiki: false,
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
       branch_protection_rules: [
         custom_branch_protection_rule('*'),
       ],
@@ -82,6 +90,9 @@ orgs.newOrg('eclipse-cdt') {
       description: "Eclipse CDT™ LSP Extensions for CDT",
       has_discussions: true,
       web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
       branch_protection_rules: [
         custom_branch_protection_rule('*'),
       ],
@@ -91,6 +102,9 @@ orgs.newOrg('eclipse-cdt') {
       default_branch: "master",
       description: "Prototype of new Managed Build system for Eclipse CDT",
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
       branch_protection_rules: [
         custom_branch_protection_rule('*'),
       ],
@@ -101,6 +115,9 @@ orgs.newOrg('eclipse-cdt') {
       description: "C/C++ Development Tooling (CDT) Visual Studio Code extension",
       homepage: "",
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
       branch_protection_rules: [
         custom_branch_protection_rule('*'),
       ],
