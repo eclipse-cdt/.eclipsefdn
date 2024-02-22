@@ -12,8 +12,6 @@ orgs.newOrg('eclipse-cdt') {
     dependency_graph_enabled_for_new_repositories: false,
     description: "",
     name: "Eclipse CDT™ (C/C++ Development Tooling)",
-    packages_containers_internal: false,
-    packages_containers_public: false,
     readers_can_create_discussions: true,
     security_managers+: [
       "tools-cdt-committers"
