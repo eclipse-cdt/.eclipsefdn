@@ -64,7 +64,9 @@ orgs.newOrg('eclipse-cdt') {
         default_workflow_permissions: "write",
       },
       branch_protection_rules: [
-        custom_branch_protection_rule('*'),
+        custom_branch_protection_rule('main'),
+        custom_branch_protection_rule('org.eclipse.remote-master'),
+        custom_branch_protection_rule('cdt_*'),
       ],
     },
     orgs.newRepo('cdt-infra') {
@@ -93,7 +95,8 @@ orgs.newOrg('eclipse-cdt') {
         actions_can_approve_pull_request_reviews: false,
       },
       branch_protection_rules: [
-        custom_branch_protection_rule('*'),
+        custom_branch_protection_rule('master'),
+        custom_branch_protection_rule('cdt_lsp_*'),
       ],
     },
     orgs.newRepo('cdt-new-managedbuild-prototype') {
