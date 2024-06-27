@@ -7,9 +7,6 @@ local custom_branch_protection_rule(pattern) =
 
 orgs.newOrg('eclipse-cdt') {
   settings+: {
-    dependabot_alerts_enabled_for_new_repositories: false,
-    dependabot_security_updates_enabled_for_new_repositories: false,
-    dependency_graph_enabled_for_new_repositories: false,
     description: "",
     name: "Eclipse CDT™ (C/C++ Development Tooling)",
     security_managers+: [
