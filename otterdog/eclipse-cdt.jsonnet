@@ -25,6 +25,11 @@ orgs.newOrg('eclipse-cdt') {
       ],
     },
   ],
+  secrets+: [
+    orgs.newOrgSecret('GITLAB_API_TOKEN') {
+      value: "pass:bots/tools.cdt/gitlab.eclipse.org/api-token",
+    },
+  ],
   _repositories+:: [
     orgs.newRepo('.github') {
       allow_merge_commit: true,
