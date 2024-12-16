@@ -85,7 +85,6 @@ orgs.newOrg('eclipse-cdt') {
     },
     orgs.newRepo('cdt-lsp') {
       allow_update_branch: false,
-      default_branch: "master",
       delete_branch_on_merge: false,
       description: "Eclipse CDT™ LSP Extensions for CDT",
       has_discussions: true,
