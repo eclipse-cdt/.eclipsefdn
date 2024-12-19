@@ -93,7 +93,7 @@ orgs.newOrg('eclipse-cdt') {
         actions_can_approve_pull_request_reviews: false,
       },
       branch_protection_rules: [
-        custom_branch_protection_rule('master'),
+        custom_branch_protection_rule('main'),
         custom_branch_protection_rule('cdt_lsp_*'),
       ],
     },
