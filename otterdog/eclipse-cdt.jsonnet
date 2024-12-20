@@ -9,9 +9,6 @@ orgs.newOrg('tools.cdt', 'eclipse-cdt') {
   settings+: {
     description: "",
     name: "Eclipse CDT™ (C/C++ Development Tooling)",
-    security_managers+: [
-      "tools-cdt-committers"
-    ],
     web_commit_signoff_required: false,
     workflows+: {
       default_workflow_permissions: "write",
