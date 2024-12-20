@@ -5,7 +5,7 @@ local custom_branch_protection_rule(pattern) =
     required_approving_review_count: 0,
   };
 
-orgs.newOrg('eclipse-cdt') {
+orgs.newOrg('tools.cdt', 'eclipse-cdt') {
   settings+: {
     description: "",
     name: "Eclipse CDT™ (C/C++ Development Tooling)",
