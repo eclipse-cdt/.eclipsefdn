@@ -26,6 +26,9 @@ orgs.newOrg('tools.cdt', 'eclipse-cdt') {
     orgs.newOrgSecret('GITLAB_API_TOKEN') {
       value: "pass:bots/tools.cdt/gitlab.eclipse.org/api-token",
     },
+    orgs.newOrgSecret('CDT_BOT_PAT') {
+      value: "pass:bots/tools.cdt/github.com/token-hd7975",
+    },
   ],
   _repositories+:: [
     orgs.newRepo('.github') {
